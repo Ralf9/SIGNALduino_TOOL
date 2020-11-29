@@ -55,13 +55,13 @@
 },
 {"name":"Ventus W132", "id":"0.3",  "data": [
      {
-        "dmsg":"sD66EE1603000", "user":"dirigent", "comment":"wind",
+        "dmsg":"sD66EE1603000", "user":"dirigent", "model":"W132", "comment":"wind",
         "internals": {"DEF":"CUL_TCM97001_214", "NAME":"W132_214"},
         "readings": {"state":"Wg: 1.2  Wd: N ", "battery":"ok", "channel":"1"},
         "rmsg":"MS;P1=492;P2=-4005;P3=-8937;P4=-2023;D=13121214121412121414121214121212141212121414141412141212141414141414141212;CP=1;SP=3;s6;e;m1;"
      },
      {
-        "dmsg":"sD6680020C000", "user":"dirigent", "comment":"wind",
+        "dmsg":"sD6680020C000", "user":"dirigent", "model":"W132", "comment":"wind",
         "internals": {"DEF":"CUL_TCM97001_214", "NAME":"W132_214"},
         "readings": {"state":"Ws: 0.8", "battery":"ok", "channel":"1"},
         "rmsg":"MS;P1=492;P2=-4005;P3=-8937;P4=-2023;D=13121214121412121414121214121414141414141414141414141412141414141412121414;CP=1;SP=3;s6;e;m2;"
@@ -70,7 +70,7 @@
 },
 {"name":"Ventus W174", "id":"0.3", "data": [
       {
-       "dmsg":"s336C9C002000", "user":"andies", "comment":"rain",
+       "dmsg":"s336C9C002000", "user":"andies", "model":"W174", "comment":"rain",
        "internals": {"DEF":"CUL_TCM97001_51", "NAME":"W174_51"},
        "readings": {"state":"R: 14.25", "battery":"ok"},
        "rmsg":"MS;P3=478;P4=-4052;P5=-2022;P6=-9075;D=536353534343535343435343435343435353435353434343535353535353535353535353435;CP=3;SP=6;R=248;O;m0;"
@@ -525,7 +525,7 @@
 },
 {"name":"Unitec_47031", "id":"30", "data": [
     {
-      "dmsg":"P30#955", "user":"Dr.E.Witz", "model":"Unitec_47031", "repeat":"7", "comment":"remote door reed switch, model is under development (ID 63,83 additionally)",
+      "dmsg":"P30#955", "user":"Dr.E.Witz", "model":"Unitec_47031", "repeat":"7", "comment":"remote door reed switch, model is under development (ID 83 additionally)",
       "internals": {"DEF":"Unitec_47031 95", "NAME":"Unitec_47031_95"},
       "readings": {"state":"1", "System-Housecode":"10010101 (on|off|off|on|off|on|off|on)", "Usersystem":"Unitec 47121", "Zone":"010 (off|on|off) - Zone 3"},
       "rmsg":"MU;P0=309;P1=636;P2=-690;P3=-363;P4=-10027;D=012031203120402031312031203120312031204020313120312031203120312040203131203120312031203120402031312031203120312031204020313120312031203120312040203131203120312031203120402031312031203120312031204020313120312031203120312040203131203120312030;CP=0;O;"
@@ -534,7 +534,7 @@
 },
 {"name":"FreeTec PE-6946", "id":"32", "data": [
     {
-      "dmsg":"P32#154FFF", "user":"SD_Protocol",
+      "dmsg":"P32#154FFF", "user":"SD_Protocol", "model":"FreeTec_PE-6946", "repeat":"3",
       "internals": {"DEF":"32 154FFF", "NAME":"SD_BELL_154FFF"},
       "readings": {"state":"ring"},
       "rmsg":"MU;P0=146;P1=245;P3=571;P4=-708;P5=-284;P7=-6689;D=14351435143514143535353535353535353535350704040435043504350435040435353535353535353535353507040404350435043504350404353535353535353535353535070404043504350435043504043535353535353535353535350704040435043504350435040435353535353535353535353507040404350435;CP=3;R=0;O;"
@@ -543,7 +543,7 @@
 },
 {"name":"VLOXO", "id":"32", "data": [
     {
-      "dmsg":"P32#7ED403", "user":"schwatter", "model":"FreeTec_PE-6946", "repeat":"3", "comment":"wireless dorbell (ID 40,62,63 additionally)",
+      "dmsg":"P32#7ED403", "user":"schwatter", "model":"FreeTec_PE-6946", "repeat":"3", "comment":"wireless dorbell (ID 40,62 additionally)",
       "internals": {"DEF":"32 7ED403", "NAME":"SD_BELL_7ED403"},
       "readings": {"state":"ring"},
       "rmsg":"MU;P0=130;P1=-666;P2=533;P3=-273;P5=-6200;CP=0;R=15;D=01232301230123010101010101010123230501232323232323012323012301230101010101010101232305012323232323230123230123012301010101010101012323050123232323232301232301230123010101010101010123230501232323232323012323012301230101010101010101232305012323232323230123;O;"
@@ -554,7 +554,7 @@
       {
        "dmsg":"W33#0501DD80038", "user":"HomeAuto_User",
        "internals": {"DEF":"SD_WS_33_T_1"},
-       "readings": {"state":"T: 24.2", "batteryState":"ok", "channel":"1"},
+       "readings": {"state":"T: 24.2", "batteryState":"ok", "channel":"1", "type":"E0001PA, s014, S522, TCM, TFA 30.3200, TX-EZ6"},
        "rmsg":"MS;P1=-8035;P2=504;P3=-2027;P4=-3945;D=21232323232324232423232323232323242424232424242324242323232323232323232323232324242423;CP=2;SP=1;R=19;O;m0;"
       }
    ]
@@ -572,7 +572,7 @@
       {
        "dmsg":"W33#14C1C594C0C", "user":"cxxcoder",
        "internals": {"DEF":"SD_WS_33_TH_1"},
-       "readings": {"state":"T: 18.8 H: 53", "batteryState":"ok", "channel":"1"},
+       "readings": {"state":"T: 18.8 H: 53", "batteryState":"ok", "channel":"1", "type":"E0001PA, s014, S522, TCM, TFA 30.3200, TX-EZ6"},
        "rmsg":"MS;P1=-7796;P2=745;P3=-1976;P4=-3929;D=21232323242324232324242323232323242424232323242324242323242324232324242323232323232424;CP=2;SP=1;R=30;O;m2;"
       }
    ]
@@ -661,9 +661,24 @@
       }
    ]
 },
+{"name":"KANGTAI Doorbell (Pollin 94-550405)", "id":"41", "data": [
+      {
+       "dmsg":"P41#1791D593", "user":"trosenda", "model":"Elro_DB200_/_KANGTAI_/_unitec", "comment":"sends alternately two different codes",
+       "internals": {"DEF":"41 1791D593_BA2885D3", "NAME":"SD_BELL_1791D593_BA2885D3"},
+       "readings": {"state":"ring"},
+       "rmsg":"MS;P1=403;P2=-7102;P3=-1608;P4=1378;P5=-620;D=121313134513454545451313451313134545451345134513454513134513134545;CP=1;SP=2;R=5;O;m0;"
+      },
+      {
+       "dmsg":"P41#BA2885D3", "user":"trosenda", "model":"Elro_DB200_/_KANGTAI_/_unitec", "comment":"sends alternately two different codes",
+       "internals": {"DEF":"41 1791D593_BA2885D3", "NAME":"SD_BELL_1791D593_BA2885D3"},
+       "readings": {"state":"ring"},
+       "rmsg":"MS;P0=1390;P1=-600;P2=409;P3=-1600;P4=-7083;D=240123010101230123232301230123232301232323230123010101230123230101;CP=2;SP=4;R=248;O;m0;"
+      }
+    ]
+},
 {"name":"Pollin_551227", "id":"42", "data": [
       {
-       "dmsg":"P42#FE1FF87FE1FF86", "user":"trosenda",
+       "dmsg":"P42#FE1FF87FE1FF86", "user":"trosenda", "model":"Pollin_551227",
        "internals": {"DEF":"42 FE1FF87", "NAME":"SD_BELL_FE1FF87"},
        "readings": {"state":"ring"},
        "rmsg":"MU;P0=-491;P1=471;P2=1445;D=0101010101010101010102020202010101010101010101010202020201010101010101010101020202020101010101010101010102020202010101;CP=1;R=67;"
@@ -875,7 +890,7 @@
 },
 {"name":"m-e doorbell", "id":"57", "data": [
     {
-      "dmsg":"P57#2AA4A7", "user":"rippi46", "comment":"radio gong transmitter for FG- and Basic-Serie",
+      "dmsg":"P57#2AA4A7", "user":"rippi46", "model":"FG_/_Basic-Serie", "comment":"radio gong transmitter for FG- and Basic-Serie",
       "internals": {"DEF":"57 2AA4A7", "NAME":"SD_BELL_2AA4A7"},
       "readings": {"state":"ring"},
       "rmsg":"MC;LL=-653;LH=665;SL=-317;SH=348;D=D55B58;C=330;L=21;"
