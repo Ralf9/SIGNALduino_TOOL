@@ -17,10 +17,19 @@
       }
     ]
 },
+{"name":"Pearl NC7159", "id":"0", "data": [
+      {
+       "dmsg":"s52880C411000","user":"killah78", "model":"NC_WS",
+       "internals": {"DEF":"CUL_TCM97001_82", "NAME":"NC_WS_82", "AlternativeDEFcode":"CUL_TCM97001_5_40"},
+       "readings": {"state":"T: 19.6 H: 17", "battery":"ok", "channel":"1", "mode":"normal"},
+       "rmsg":"MS;P3=-1929;P4=509;P5=-3888;P6=-9158;D=46434543454343454345434343454343434343434345454343434543434343434543434345;CP=4;SP=6;R=36;O;m2;"
+      }
+    ]
+},
 {"name":"Prologue", "id":"0", "data": [
       {
        "dmsg":"s916001A0A000", "idmsg":"s916D01A0A000", "user":"SD_Protocol", "model":"Prologue",
-       "internals": {"DEF":"CUL_TCM97001_145", "NAME":"Prologue_145"},
+       "internals": {"DEF":"CUL_TCM97001_145", "NAME":"Prologue_145", "AlternativeDEFcode":"CUL_TCM97001_9_22"},
        "readings": {"state":"T: 2.6", "battery":"ok", "channel":"1", "mode":"normal"},
        "rmsg":"MS;P0=-4152;P1=643;P2=-2068;P3=-9066;D=1310121210121212101210101212121212121212121212121010121012121212121012101212;CP=1;SP=3;R=220;O;m2;"
       }
@@ -85,6 +94,15 @@
        "rmsg":"MS;P0=-3946;P1=448;P2=-1998;P3=-9309;P4=284;D=131212101212101212101212121010101010101012121012121010101210101010124;CP=1;SP=3;e;m3;"
       }
     ]
+},
+{"name":"Conrad RSL", "id":"1", "data": [
+    {
+      "dmsg":"P1#9374A400", "user":"gandi1791", "comment":"Kanal 4 - Taste 3 on, https://forum.fhem.de/index.php/topic,58397.msg880350.html#msg880350 (ID 41 additionally)",
+      "internals": {"DEF":"74A400_ALL", "NAME":"RSL_74A400_ALL"},
+      "readings": {"state":"on"},
+      "rmsg":"MS;P1=1154;P2=-697;P3=559;P4=-1303;P5=-7173;D=351234341234341212341212123412343412341234341234343434343434343434;CP=3;SP=5;R=247;O;"
+    }
+  ]
 },
 {"name":"JCHENG SECURITY", "id":"3", "data": [
     {
@@ -335,14 +353,32 @@
       }
    ]
 },
+{"name":"KD-101LA", "id":"13", "data": [
+    {
+      "dmsg":"P13#32E44F", "user":"Wahrschauer", "model":"KD-101LA", "comment":"Smoke alarm device / decode as MS",
+      "internals": {"DEF":"32E44F", "NAME":"FLAMINGO_32E44F"},
+      "readings": {"state":"Alarm", "alarmcounter":"1", "lastReceive_ID":"13"},
+      "rmsg":"MS;P0=-1413;P1=757;P2=-2779;P3=-16079;P4=8093;P5=-954;D=1345121210101212101210101012121012121210121210101010;CP=1;SP=3;R=33;O;"
+    }
+  ]
+},
 {"name":"FA22RF", "id":"13.1", "data": [
-      {
-       "dmsg":"P13.1#CBFAD2", "user":"HomeAuto_User", "repeat":"3",
-       "internals": {"DEF":"CBFAD2", "NAME":"FLAMINGO_CBFAD2"},
-       "readings": {"state":"Alarm"},
-       "rmsg":"MU;P0=-5684;P1=8149;P2=-887;P3=798;P4=-1393;P5=-2746;P6=-19956;D=0123434353534353434343434343435343534343534353534353612343435353435343434343434343534353434353435353435361234343535343534343434343434353435343435343535343536123434353534353434343434343435343534343534353534353612343435353435343434343434343534353434353435;CP=3;R=0;"
-      }
-   ]
+    {
+      "dmsg":"P13.1#CBFAD2", "repeat":"3", "user":"HomeAuto_User", "model":"FA22RF", "comment":"Smoke alarm device / decode as MU",
+      "internals": {"DEF":"CBFAD2", "NAME":"FLAMINGO_CBFAD2"},
+      "readings": {"state":"Alarm", "alarmcounter":"1", "lastReceive_ID":"13.1"},
+      "rmsg":"MU;P0=-5684;P1=8149;P2=-887;P3=798;P4=-1393;P5=-2746;P6=-19956;D=0123434353534353434343434343435343534343534353534353612343435353435343434343434343534353434353435353435361234343535343534343434343434353435343435343535343536123434353534353434343434343435343534343534353534353612343435353435343434343434343534353434353435;CP=3;R=0;"
+    }
+  ]
+},
+{"name":"LM-101LD", "id":"13.2", "data": [
+    {
+      "dmsg":"P13#B0FFAF", "user":"unknown", "model":"LM-101LD", "comment":"https://github.com/RFD-FHEM/RFFHEM/issues/233#issuecomment-382070720",
+      "internals": {"DEF":"B0FFAF", "NAME":"FLAMINGO_B0FFAF"},
+      "readings": {"state":"Alarm", "alarmcounter":"1", "lastReceive_ID":"13"},
+      "rmsg":"MS;P1=-2708;P2=796;P3=-1387;P4=-8477;P5=8136;P6=-904;D=2456212321212323232321212121212121212123212321212121;CP=2;SP=4;"
+    }
+  ]
 },
 {"name":"Chilitec_22640", "id":"14", "data": [
       {
@@ -471,12 +507,20 @@
     }
   ]
 },
-{"name":"visivon remote", "id":"24", "data": [
-      {
-       "dmsg":"u24#9F7DF825029C10", "user":"sidey", "comment":"von 2015",
-       "rmsg":"MU;P0=132;P1=500;P2=-233;P3=-598;P4=-980;P5=4526;D=012120303030303120303030453120303121212121203121212121203121212121212030303030312030312031203030303030312031203031212120303030303120303030453120303121212121203121212121203121212121212030303030312030312031203030303030312031203031212120303030;CP=0;O;"
-      }
-   ]
+{"name":"Visivo_7DF825", "id":"24", "data": [
+    {
+      "dmsg":"P24#9F7DF825029C10", "user":"MikeRoxx", "model":"Visivo", "comment":"Remote control for motorized screen",
+      "internals": {"DEF":"Visivo 7DF825", "NAME":"Visivo_7DF825"},
+      "readings": {"state":"up", "LastAction":"receive", "deviceCode":"7DF825"},
+      "rmsg":"MU;P0=505;P1=140;P2=-771;P3=-225;P5=4558;D=012031212030303030312030303030312030303030303121212121203121203120312121212121203120312120303031212121212031212121252031212030303030312030303030312030303030303121212121203121203120312121212121203120312120303031212121212031212121252031212030;CP=1;O;"
+    },
+    {
+      "dmsg":"P24#9F7DF82508A210", "user":"MikeRoxx", "model":"Visivo", "comment":"Remote control for motorized screen",
+      "internals": {"DEF":"Visivo 7DF825", "NAME":"Visivo_7DF825"},
+      "readings": {"state":"stop", "LastAction":"receive", "deviceCode":"7DF825"},
+      "rmsg":"MU;P0=-764;P1=517;P2=-216;P3=148;P5=4550;D=012303012121212123012121212123012121212121230303030301230301230123030303012303030123012303030123030303012303030305012303012121212123012121212123012121212121230303030301230301230123030303012303030123012303030123030303012303030305012303012120;CP=3;O;"
+    }
+  ]
 },
 {"name":"xavax", "id":"26", "data": [
     {
@@ -834,6 +878,33 @@
       }
    ]
 },
+{"name":"IAN 114324", "id":"51", "data": [
+    {
+      "dmsg":"W51#11225FB401",  "user":"6040", "comment":"Lidl Weatherstation, Channel 1",
+      "internals": {"DEF":"SD_WS_51_TH_1"},
+      "readings": {"state":"T: 17.3 H: 40", "batteryState":"ok", "channel":"1", "humidity":"40", "sendmode":"auto", "temperature":"17.3", "trend":"falling", "type":"Auriol IAN 275901, IAN 114324, IAN 60107"},
+      "rmsg":"MS;P0=-1848;P1=577;P2=-4066;P3=-15997;P4=1013;P5=-1001;P6=-7875;D=16101010121010101210101210101012101012101212121212121012121012101010101010101010121345454545;CP=1;SP=6;O;"
+    }
+  ]
+},
+{"name":"IAN 275901", "id":"51", "data": [
+    {
+      "dmsg":"W51#0849536953", "user":"Stertzi", "comment":"Lidl Weatherstation, Channel 3",
+      "internals": {"DEF":"SD_WS_51_TH_3"},
+      "readings": {"state":"T: 6.3 H: 95", "batteryState":"ok", "channel":"3", "humidity":"95", "sendmode":"manual", "temperature":"6.3", "trend":"rising", "type":"Auriol IAN 275901, IAN 114324, IAN 60107"},
+      "rmsg":"MS;P0=-4074;P1=608;P2=-1825;P3=-15980;P4=1040;P5=-975;P6=-7862;D=16121212121012121212101212101212101210121012121010121010121012121012101210121210101345454545;CP=1;SP=6;"
+    }
+  ]
+},
+{"name":"IAN 60107", "id":"51", "data": [
+    {
+      "dmsg":"W51#F03048F761",  "user":"dennis82ni", "comment":"Lidl Weatherstation, Channel 1",
+      "internals": {"DEF":"SD_WS_51_TH_1"},
+      "readings": {"state":"T: -2.9 H: 76", "batteryState":"ok", "channel":"1", "humidity":"76", "sendmode":"auto", "temperature":"-2.9", "trend":"consistent", "type":"Auriol IAN 275901, IAN 114324, IAN 60107"},
+      "rmsg":"MS;P2=594;P3=-7386;P4=-4081;P5=-1873;D=2324242424252525252525242425252525252425252425252524242424252424242524242525252524;CP=2;SP=3;R=242;"
+    }
+  ]
+},
 {"name":"AURIOL AHFL 433 B2", "id":"53", "data": [
     {
       "dmsg":"W53#0700DF7A4E0", "user":"elektron-bbs", "comment":"CH1, Lidl IAN 314695 (ID 33,51 additionally)",
@@ -888,6 +959,30 @@
     }
   ]
 },
+{"name":"AC114_01B_00587B", "id":"56", "data": [
+    {
+      "dmsg":"P56#A300587B010043178", "user":"Horst12345", "model":"AC114_01B", "comment":"Celexon Motorleinwand",
+      "internals": {"DEF":"AC114_01B 00587B", "NAME":"AC114_01B_00587B"},
+      "readings": {"state":"down", "LastAction":"receive", "deviceCode":"00587B"},
+      "rmsg":"MU;P0=5036;P1=-624;P2=591;P3=-227;P4=187;P5=-5048;D=0123412341414123234141414141414141412341232341414141232323234123234141414141414123414141414141414141234141414123234141412341232323250123412341414123234141414141414141412341232341414141232323234123234141414141414123414141414141414141234141414123234141412;CP=4;O;"
+    }
+  ]
+},
+{"name":"AC114_01B_479696", "id":"56", "data": [
+    {
+      "dmsg":"P56#A347969601000B7F8", "user":"TheChatty", "model":"AC114_01B", "comment":"remote control AC114-01B",
+      "internals": {"DEF":"AC114_01B 479696", "NAME":"AC114_01B_479696"},
+      "readings": {"state":"up", "LastAction":"receive", "deviceCode":"479696"},
+      "rmsg":"MU;P0=-16412;P1=5195;P2=-598;P3=585;P4=-208;P5=192;D=01234523452525234345234525252343434345252345234345234525234523434525252525252525234525252525252525252525252345234345234343434343434341234523452525234345234525252343434345252345234345234525234523434525252525252525234525252525252525252525252345234345234343;CP=5;R=105;O;"
+    },
+    {
+      "dmsg":"P56#A3479696010023978", "user":"TheChatty", "model":"AC114_01B", "comment":"remote control AC114-01B",
+      "internals": {"DEF":"AC114_01B 479696", "NAME":"AC114_01B_479696"},
+      "readings": {"state":"stop", "LastAction":"receive", "deviceCode":"479696"},
+      "rmsg":"MU;P0=-2341;P1=5206;P2=-571;P3=591;P4=-211;P5=207;D=01234523452525234345234525252343434345252345234345234525234523434525252525252525234525252525252525252523452525234343452523452343434341234523452525234345234525252343434345252345234345234525234523434525252525252525234525252525252525252523452525234343452523;CP=5;R=107;O;"
+    }
+  ]
+},
 {"name":"m-e doorbell", "id":"57", "data": [
     {
       "dmsg":"P57#2AA4A7", "user":"rippi46", "model":"FG_/_Basic-Serie", "comment":"radio gong transmitter for FG- and Basic-Serie",
@@ -916,7 +1011,7 @@
       {
        "dmsg":"W58#45C8142445DB0", "user":"Ralf9", "repeat":"2",
        "internals": {"DEF":"SD_WS_58_TH_2"},
-       "readings": {"state":"T: 18.9 H: 69", "batteryState":"ok", "channel":"2", "type":"TFA 30.3208.0"},
+       "readings": {"state":"T: 18.9 H: 69", "batteryState":"ok", "channel":"2", "type":"TFA 30.3208.02, FT007xx"},
        "rmsg":"MC;LL=-981;LH=964;SL=-480;SH=520;D=002BA37EBDBBA24F0015D1BF5EDDD127800AE8DFAF6EE893C;C=486;L=194;R=34;"
       }
     ]
@@ -1158,6 +1253,45 @@
       "internals": {"DEF":"LED_XM21_0 FFFFFFFFFFFFFF", "NAME":"LED_XM21_0_FFFFFFFFFFFFFF"},
       "readings": {"state":"off", "deviceCode":"11111111111111111111111111111111111111111111111111111111"},
       "rmsg":"MU;P0=-203;P1=412;P2=114;D=01010101020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020101010102020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200;CP=2;R=74;"
+    }
+  ]
+},
+{"name":"DS1820_4Fach", "id":"77", "data": [
+    {
+      "dmsg":"TXA0D2728722", "user":"unknown", "comment":"self build sensor, is under development, https://github.com/juergs/NANO_DS1820_4Fach",
+      "internals": {"DEF":"105", "NAME":"CUL_TX_105"},
+      "readings": {"state":"T: 22.8", "temperature":"22.8"},
+      "rmsg":"MU;P0=-1483;P1=239;P2=970;P3=-21544;D=01020202010132020202010201020202020201010201020201020201010102020102010202020201010102020102020201013202020201020102020202020101020102020102020101010202010201020202020101010202010202020101;CP=1;"
+    }
+  ]
+},
+{"name":"BeSmart_S4", "id":"78", "data": [
+    {
+      "dmsg":"P78#53490", "repeat":"3", "user":"TheChatty", "model":"BeSmart_S4", "comment":"Remote control SEAV BeSmart S4 for BEST Cirrus Draw",
+      "internals": {"DEF":"BeSmart_S4 534", "NAME":"BeSmart_S4_534"},
+      "readings": {"state":"light_toggle", "LastAction":"receive", "deviceCode":"010100110100"},
+      "rmsg":"MU;P0=-19987;P1=205;P2=-530;P3=501;P4=-253;P6=-4094;D=01234123412123434123412123412123412121216123412341212343412341212341212341212121612341234121234341234121234121234121212161234123412123434123412123412123412121216123412341212343412341212341212341212121;CP=1;R=70;"
+    },
+    {
+      "dmsg":"P78#53488", "repeat":"3", "user":"TheChatty", "model":"BeSmart_S4", "comment":"Remote control SEAV BeSmart S4 for BEST Cirrus Draw",
+      "internals": {"DEF":"BeSmart_S4 534", "NAME":"BeSmart_S4_534"},
+      "readings": {"state":"level_up", "LastAction":"receive", "deviceCode":"010100110100"},
+      "rmsg":"MU;P0=-8617;P1=204;P2=-544;P3=490;P4=-246;P6=-4106;D=01234123412123434123412123412121234121216123412341212343412341212341212123412121612341234121234341234121234121212341212161234123412123434123412123412121234121216123412341212343412341212341212123412121;CP=1;R=70;"
+    },
+    {
+      "dmsg":"P78#53484", "repeat":"3", "user":"TheChatty", "model":"BeSmart_S4", "comment":"Remote control SEAV BeSmart S4 for BEST Cirrus Draw",
+      "internals": {"DEF":"BeSmart_S4 534", "NAME":"BeSmart_S4_534"},
+      "readings": {"state":"level_down", "LastAction":"receive", "deviceCode":"010100110100"},
+      "rmsg":"MU;P0=-14542;P1=221;P2=-522;P3=492;P4=-240;P5=-4114;D=01234123412123434123412123412121212341215123412341212343412341212341212121234121512341234121234341234121234121212123412151234123412123434123412123412121212341215123412341212343412341212341212121234121;CP=1;R=62;"
+    }
+  ]
+},
+{"name":"BELL-201-TX", "id":"79", "data": [
+    {
+      "dmsg":"P79#A0E", "repeat":"7", "user":"a13xde", "model":"Heidemann_|_Heidemann_HX_|_VTX-BELL", "comment":"https://forum.fhem.de/index.php/topic,58397.msg828464.html#msg828464",
+      "internals": {"DEF":"79 A0E", "NAME":"SD_BELL_A0E"},
+      "readings": {"state":"ring"},
+      "rmsg":"MU;P0=-7152;P1=872;P2=-593;P3=323;P4=-296;P5=622;P6=-4650;D=0123452323232323454545236345234523232323234545452363452345232323232345454523634523452323232323454545236345234523232323234545452363452345232323232345454523634523452323232323454545236345234523232323234545452363452345232323232345454523634523452323232323454;CP=3;R=26;O;"
     }
   ]
 },
@@ -1617,13 +1751,13 @@
 {"name":"TX29DTH-IT", "id":"100", "data": [
       {
        "dmsg":"OK 9 42 129 4 212 44", "user":"Ralf9", "comment":"batInserted=128",
-       "internals": {"DEF":"2A"},
+       "internals": {"DEF":"2A", "battery_new":"1"},
        "readings": {"state":"T: 23.6 H: 44", "battery":"ok"},
        "rmsg":"MN;D=9AA6362CC8AAAA000012F8F4;R=4;"
       },
       {
        "dmsg":"OK 9 62 1 4 231 35", "user":"Ralf9", "comment":"batInserted=0",
-       "internals": {"DEF":"3E"},
+       "internals": {"DEF":"3E", "battery_new":"0"},
        "readings": {"state":"T: 25.5 H: 35", "battery":"ok"},
        "rmsg":"MN;D=9F86552372AAAA00001D5EDB;R=27;"
       }
@@ -1643,6 +1777,15 @@
        "rmsg":"MN;D=020403B7A10101A7000031ECAAA9615CF878C1E17E3CDF4882A8D0045204CB0D;N=3;R=252;"
       }
    ]
+},
+{"name":"TFA 30.3155", "id":"103", "data": [
+    {
+      "dmsg":"OK 9 4 129 4 203 55", "user":"nagelreo", "comment":"nicht zu empfehlen, einzelne 30.3155.WD liegen mit der Frequenz daneben",
+      "internals": {"DEF":"04", "NAME":"LaCrosse_04", "battery_new":"1"},
+      "readings": {"state":"T: 22.7 H: 55", "battery":"ok"},
+      "rmsg":"MN;D=91262737AE2122B707D0062A;N=2;R=235;"
+    }
+  ]
 },
 {"name":"TR60C-1", "id":"104", "data": [
     {
@@ -1667,40 +1810,40 @@
 },
 {"name":"BF-301", "id":"105", "data": [
     {
-       "dmsg":"P105#FAD08883A3", "user":"stsirakidis", "model":"BF_301", "repeat":"1", "comment":"BF_301_FAD0 down",
+       "dmsg":"P105#FAD08883A3", "user":"stsirakidis", "model":"BF_301", "repeat":"1", "comment":"Remote control from Shenzhen BOFU Mechanic & Electronic Co., Ltd.",
        "internals": {"DEF":"BF_301 FAD0", "NAME":"BF_301_FAD0"},
        "readings": {"state":"down", "deviceCode":"FAD0"},
        "rmsg":"MU;P0=-697;P1=5629;P2=291;P3=3952;P4=-2459;P5=1644;P6=-298;P7=689;D=34567676767676207620767620762020202076202020762020207620202020207676762076202020767614567676767676207620767620762020202076202020762020207620202020207676762076202020767614567676767676207620767620762020202076202020762020207620202020207676762076202020767614;CP=2;R=41;O;"
     },
     {
-       "dmsg":"P105#FAD08A83A1", "user":"stsirakidis", "model":"BF_301", "repeat":"1", "comment":"BF_301_FAD0 stop",
+       "dmsg":"P105#FAD08A83A1", "user":"stsirakidis", "model":"BF_301", "repeat":"1", "comment":"Remote control from Shenzhen BOFU Mechanic & Electronic Co., Ltd.",
        "internals": {"DEF":"BF_301 FAD0", "NAME":"BF_301_FAD0"},
        "readings": {"state":"stop", "deviceCode":"FAD0"},
        "rmsg":"MU;P0=5630;P1=3968;P2=-2458;P3=1642;P4=-285;P5=690;P6=282;P7=-704;D=12345454545454675467545467546767676754676767546754675467676767675454546754676767675402345454545454675467545467546767676754676767546754675467676767675454546754676767675402345454545454675467545467546767676754676767546754675467676767675454546754676767675402;CP=6;R=47;O;"
     },
     {
-       "dmsg":"P105#FAD08383A8", "user":"stsirakidis", "model":"BF_301", "repeat":"2", "comment":"BF_301_FAD0 up",
+       "dmsg":"P105#FAD08383A8", "user":"stsirakidis", "model":"BF_301", "repeat":"2", "comment":"Remote control from Shenzhen BOFU Mechanic & Electronic Co., Ltd.",
        "internals": {"DEF":"BF_301 FAD0", "NAME":"BF_301_FAD0"},
        "readings": {"state":"up", "LastAction":"receive", "deviceCode":"FAD0"},
        "rmsg":"MU;P0=-500;P1=5553;P2=-2462;P3=1644;P4=-299;P5=679;P6=298;P7=-687;D=01234545454545467546754546754676767675467676767675454546767676767545454675467546767671234545454545467546754546754676767675467676767675454546767676767545454675467546767671234545454545467546754546754676767675467676767675454546767676767545454675467546767671;CP=6;R=48;O;"
     }
   ]
 },
-{"name":"GT-TMBBQ-01", "id":"106", "data": [
+{"name":"GT-TMBBQ-01s", "id":"106", "data": [
     {
-      "dmsg":"W106#2632DC", "user":"elektron-bbs", "comment":"BBQ temperature sensor GT-TMBBQ-01s",
+      "dmsg":"W106#2632DC", "user":"elektron-bbs", "comment":"BBQ temperature sensor",
       "internals": {"DEF":"SD_WS_106_T"},
       "readings": {"state":"T: 22.6", "temperature":"22.6", "type":"GT-TMBBQ-01"},
       "rmsg":"MS;P0=525;P1=-2051;P3=-8905;P4=-4062;D=0301010401010404010101040401010401040401040404;CP=0;SP=3;R=35;e;b=2;m0;"
     },
     {
-      "dmsg":"W106#9A57A8", "user":"elektron-bbs", "comment":"BBQ temperature sensor GT-TMBBQ-01s",
+      "dmsg":"W106#9A57A8", "user":"elektron-bbs", "comment":"BBQ temperature sensor",
       "internals": {"DEF":"SD_WS_106_T"},
       "readings": {"state":"T: 88.1", "temperature":"88.1", "type":"GT-TMBBQ-01"},
       "rmsg":"MS;P1=-8514;P2=488;P3=-4075;P4=-2068;D=2123242423232423242423242324232323232423242324;CP=2;SP=1;R=31;e;b=70;s=4;m0;"
     },
     {
-      "dmsg":"W106#9A5D20", "user":"elektron-bbs", "comment":"BBQ temperature sensor GT-TMBBQ-01s",
+      "dmsg":"W106#9A5D20", "user":"elektron-bbs", "comment":"BBQ temperature sensor",
       "internals": {"DEF":"SD_WS_106_T"},
       "readings": {"state":"T: 97.8", "temperature":"97.8", "type":"GT-TMBBQ-01"},
       "rmsg":"MS;P1=-9144;P2=469;P3=-4101;P4=-2099;D=2123242423232423242423242323232423242423242424;CP=2;SP=1;R=58;O;b=70;s=4;m0;"
